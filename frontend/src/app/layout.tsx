@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={montserrat.className}>
+        <Providers>
           <LayoutClient>
-            <Providers>
               {children}
-            </Providers>
           </LayoutClient>
+        </Providers>
       </body>
     </html>
   );
