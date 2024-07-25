@@ -5,7 +5,7 @@ export default function page() {
   return (
     <section>
         <ProtectedPage>
-            welcome
+            Приложение погоды принято в разработку!
         </ProtectedPage>
     </section>
   )

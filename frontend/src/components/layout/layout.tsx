@@ -13,9 +13,10 @@ export default function LayoutClient({ children }: PropsWithChildren<unknown>) {
         <main className={styles.layout}>
             {session && <Sidebar />}
             <div className={styles.nav}>
-                <Nav />
+                    <Nav />
             </div>
             <section className={session ? styles.contentWithSidebar : styles.contentFullWidth}>
+                
                 {children}
             </section>
         </main>

@@ -9,19 +9,19 @@ function Nav() {
     const { data: session, status } = useSession();
 
     return (
-        <nav className={styles.nav}>
-            <div className={styles.logo}>
-                {status === 'unauthenticated' && (
-                    <Link href="/">
-                        <p className={styles.text}>Svalka</p>
-                    </Link>
-                )}
-            </div>
-            <div className={styles.buttons}>
-                {status === 'authenticated' && <button>Sign Out</button>}
-                {status === 'unauthenticated' && <button>Sign In</button>}
-            </div>
-        </nav>
+            <nav className={styles.nav}>
+                <div className={styles.logo}>
+                    {status === 'unauthenticated' && (
+                        <Link href="/">
+                            <p className={styles.text}>Svalka</p>
+                        </Link>
+                    )}
+                </div>
+                <div className={styles.buttons}>
+                    {status === 'authenticated' && <button><Link href="/profile">Sign Out</Link>Sign Out</button>}
+                    {status === 'unauthenticated' && <button><Link href="/login">Sign In</Link></button>}
+                </div>
+            </nav>
     );
 }
 
