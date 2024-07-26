@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'; // Импортируем хук useEffect и useState из React
 import axios from 'axios'; // Импортируем axios для работы с HTTP запросами
 
-const API_KEY = 'f6f6e9c34403b02fcbbd3a5c2a4016f5'; // Ключ для OpenWeatherMap API
+const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY; // Ключ для OpenWeatherMap API
 
 interface WeatherData { // Интерфейс для структурирования данных о погоде
   name: string; // Название

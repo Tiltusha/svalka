@@ -18,7 +18,7 @@ function Nav() {
                     )}
                 </div>
                 <div className={styles.buttons}>
-                    {status === 'authenticated' && <button><Link href="/profile">Sign Out</Link>Sign Out</button>}
+                    {status === 'authenticated' && <button><Link href="/profile">Sign Out</Link></button>}
                     {status === 'unauthenticated' && <button><Link href="/login">Sign In</Link></button>}
                 </div>
             </nav>
