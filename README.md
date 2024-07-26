@@ -30,7 +30,7 @@
    Сначала клонируйте репозиторий проекта с GitHub и перейдите в папку проекта:
 
     ```sh
-    git clone https://github.com/your-username/svalka.git
+    git clone https://github.com/tiltusha/svalka.git
     ```
 
     Переход в папку проекта <br>
