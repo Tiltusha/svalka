@@ -1,3 +1,4 @@
+
 # Документация по установке и запуску проекта "Svalka"
 
 ## Описание проекта
@@ -23,48 +24,63 @@
    Сначала клонируйте репозиторий проекта с GitHub и перейдите в папку проекта:
 
    
+   git clone https://github.com/your-username/svalka.git
+   cd frontend
+   
 2. Установка зависимостей
 Используйте npm или yarn для установки всех необходимых зависимостей. В корне проекта выполните одну из следующих команд:
 
-
-npm install
-или
-
-
-yarn install
+   
+   npm install
+   
+   или
+   
+   yarn install
+   
 3. Настройка переменных окружения
 Создайте файл .env.local в корне проекта и добавьте в него следующие переменные окружения:
 
-NEXTAUTH_URL=http://localhost:3000
-GITHUB_ID=your_github_client_id
-NEXTAUTH_SECRET="supersecret"
-GITHUB_SECRET=your_github_client_secret
-NEXT_PUBLIC_WEATHER_API_KEY=your_openweathermap_api_key
-Замените your_github_client_id, your_github_client_secret и your_openweathermap_api_key на ваши реальные значения. Эти ключи необходимы для работы авторизации через GitHub и получения данных о погоде.
+   
+   NEXTAUTH_URL=http://localhost:3000
+   GITHUB_ID=your_github_client_id
+   NEXTAUTH_SECRET="supersecret"
+   GITHUB_SECRET=your_github_client_secret
+   NEXT_PUBLIC_WEATHER_API_KEY=your_openweathermap_api_key
+   
+   Замените на ваши реальные значения. Эти ключи необходимы для работы авторизации через GitHub и получения данных о погоде.
 
 4. Запуск проекта в режиме разработки
 Для запуска проекта в режиме разработки выполните следующую команду:
 
-npm run dev
-или
-
-yarn dev
-Проект будет доступен по адресу http://localhost:3000.
+   
+   npm run dev
+   
+   или
+   
+   yarn dev
+   
+   Проект будет доступен по адресу http://localhost:3000.
 
 5. Сборка и запуск проекта в production
 Для сборки проекта для production выполните следующую команду:
 
-npm run build
-или
+   
+   npm run build
+   
+   или
+   
+   yarn build
+   
+   После успешной сборки, запустите проект:
 
-yarn build
-После успешной сборки, запустите проект:
-
-npm start
-или
-
-yarn start
-Зависимости
+   
+   npm start
+   
+   или
+   
+   yarn start
+   
+## Зависимости
 
 На данный момент проект использует следующие зависимости:
 
@@ -78,32 +94,25 @@ yarn start
     "react-dom": "^18",
     "sass": "^1.77.8"
 }
-Авторизация
+## Авторизация
 
 Авторизация выполнена через next-auth с поддержкой GitHub. Для защиты страниц используется HOC-компонент ProtectedPage.
 
-Прогноз погоды
+## Прогноз погоды
 
 Прогноз погоды реализован с использованием API OpenWeatherMap.
 
-Структура проекта
+## Структура проекта
 
-components/: Все компоненты проекта.
-app/: Все страницы проекта.
-Контрибьюция
+- components/: Все компоненты проекта.
+- app/: Все страницы проекта.
+
+## Контрибьюция
 
 Если вы хотите внести свой вклад в проект, пожалуйста, создайте форк репозитория и отправьте пулреквест. Мы будем рады вашим предложениям и исправлениям!
 
-Контакты
+## Контакты
 
 Если у вас возникли вопросы или предложения, вы можете связаться с нами через Issues в GitHub репозитории.
 
 Спасибо за использование "Svalka"!
-
-
-
-
-
-
-
-
