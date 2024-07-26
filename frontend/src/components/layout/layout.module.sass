@@ -1,14 +1,23 @@
 .layout
-    position: relative
     height: 100vh
     display: grid
     grid-template-columns: repeat(20, 1fr)
     grid-template-rows: 6rem 1fr
 
-.content
-    grid-column: 2 / 21
+.contentWithSidebar
+    grid-column: 2 / 21  // Изменяем начальную колонку для контента с Sidebar
     grid-row: 2 / 20
+    overflow-y: auto
 
-.nav
+.contentFullWidth
+    grid-column: 1 / 21  // Контент занимает всю ширину страницы
+    grid-row: 2 / 20
+    overflow-y: auto
+
+.navWithSidebar
     grid-column: 2 / 21
+    grid-row: 1 / 2
+
+.navFullWidth
+    grid-column: 1 / 21
     grid-row: 1 / 2
