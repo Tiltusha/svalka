@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./page.module.sass";
 import Preview from "../components/layout/mainpage/Preview/Preview";
 import Sponsors from "../components/layout/mainpage/Sponsors/Sponsors";
+import AboutSvalka from "../components/layout/mainpage/AboutSvalka/AboutSvalka";
 import { useSession } from "next-auth/react";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
     <main className={styles.main}>
       <Preview />
       <Sponsors />
+      <AboutSvalka />
     </main>
   );
 }

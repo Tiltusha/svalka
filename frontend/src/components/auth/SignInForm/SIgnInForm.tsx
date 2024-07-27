@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import type { FormEventHandler } from "react";
+import styles from './signinform.module.sass';
 
 const SignInForm = () => {
     const router = useRouter();
@@ -26,10 +27,10 @@ const SignInForm = () => {
     }
 
     return (
-        <form onSubmit={HandleSubmit}>
-            <input type="email" name="email" required />
-            <input type="password" name="password" required />
-            <button type="submit">Sign in</button>
+        <form className={styles.login}>
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <button>Sign in</button>
         </form>
     )
 }
