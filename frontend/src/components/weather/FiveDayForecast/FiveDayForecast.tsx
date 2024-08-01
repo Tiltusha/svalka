@@ -5,11 +5,11 @@ import styles from './FiveDayForecast.module.sass';
 // Интерфейс для структуры данных о прогнозе погоды
 interface ForecastData {
   dt_txt: string; // Дата и время прогноза
+  name: string;
   main: {
     temp: number; // Температура
     temp_max: number; // Максимальная температура
     temp_min: number; // Минимальная температура
-    city: string;
   };
   weather: {
     description: string; // Описание погодных условий
@@ -31,6 +31,7 @@ const FiveDayForecast: React.FC<FiveDayForecastProps> = ({ forecastData }) => {
       {dailyForecast.map((forecast, index) => (
         <div className={styles.forecastItem} key={index}>
           <h3>{new Date(forecast.dt_txt).toLocaleDateString('ru-RU')}</h3>
+          <p>Город: {forecast.name}</p>
           <p>Температура: {forecast.main.temp}°C</p>
           <p>Максимальная: {forecast.main.temp_max}°C</p>
           <p>Минимальная: {forecast.main.temp_min}°C</p>
@@ -42,3 +43,4 @@ const FiveDayForecast: React.FC<FiveDayForecastProps> = ({ forecastData }) => {
 };
 
 export default FiveDayForecast;
+

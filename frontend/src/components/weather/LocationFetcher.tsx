@@ -24,6 +24,7 @@ interface WeatherData {
 // Интерфейс для структуры данных о прогнозе погоды
 interface ForecastData {
   dt_txt: string; // Дата и время прогноза
+  name: string;
   main: {
     temp: number; // Температура
     temp_max: number; // Максимальная температура
