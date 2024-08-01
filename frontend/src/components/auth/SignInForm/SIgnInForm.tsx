@@ -3,8 +3,11 @@
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import type { FormEventHandler } from "react";
+import styles from './signinform.module.sass';
 
-const SignInForm = () => {
+import { GithubButton } from "../GithubButton"
+
+const SignInForm = ({ children }: React.PropsWithChildren<unknown>) => {
     const router = useRouter();
 
     const HandleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
@@ -26,10 +29,11 @@ const SignInForm = () => {
     }
 
     return (
-        <form onSubmit={HandleSubmit}>
-            <input type="email" name="email" required />
-            <input type="password" name="password" required />
-            <button type="submit">Sign in</button>
+        <form className={styles.login}>
+            <input className={styles.input} type="text" placeholder="Username" autoFocus required autoComplete="username" autoCorrect="off"  />
+            <input className={styles.input} type="password" placeholder="Password" required autoComplete="current-password" />
+            <button className={styles.button} onClick={HandleSubmit}>Sign in</button>
+            <p className={styles.or}>or</p>
         </form>
     )
 }

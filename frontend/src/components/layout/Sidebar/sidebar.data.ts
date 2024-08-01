@@ -1,10 +1,12 @@
 import { CloudSun, FolderKanbanIcon, House, MessageCircle, Users2, Settings2, Icon, User } from "lucide-react";
 
-
 export const MENU = [
     {
         url: '/',
         Icon: House,
+        name: 'Главная',
+        id: 1,
+        color: 'black',
     },
     {
         url: 'profile',
